@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XSS Mitigated Website</title>
+</head>
+<body>
+    <center>
+
+        <h1>XSS Mitigated Website</h1>
+
+        <form action="/handle_data" method="post" id="userform" form="userform">
+            <label for="username">Name:</label>
+            <input type="text" id="username" name="username">
+            <input type="submit">
+        </form>
+        <textarea id="myTextArea" name="myTextArea" rows="10" columns="200" form="userform" style="width:300px; height:150px;">
+                Enter text here...
+        </textarea>
+
+
+
+        <div>
+            <h2>{{user}}</h2>
+            <p>{{textEntered}}</p>
+        </div>
+
+    </center>
+</body>
+</html>
